@@ -12,18 +12,38 @@ namespace NumbersToWords.Tests
         [TestMethod]
         public void NumberConverterConstructor_CreatesInstanceOfNumberCOnverterClass_NumberConverter()
         {
-            NumberConverter convertNum = new NumberConverter();
+            NumberConverter convertNum = new NumberConverter(4);
             Assert.AreEqual(typeof(NumberConverter), convertNum.GetType());
         }
 
-        // 2nd Test: Getting a number from my constructor(using auto-implemented properties)
-        // public void GetNumber_GetsNumberToConvert_Int()
-        // {
-        //     // Arrange
-        //     NumberConverter convertNum = new NumberConverter();
+        // 2nd Test: Getting a number from a field
+        [TestMethod]
+        public void GetNumber_GetsNumber_Int()
+        {
+            // Arrange
+            NumberConverter convertNum = new NumberConverter(7);
+            int expectedNum = 7;
 
-        //     // Act
-        //     int 
-        // }
+            // Act
+            int returnedNum = convertNum.Number;
+
+            // Assert
+            Assert.AreEqual(expectedNum, returnedNum);
+
+        }
+
+        // 3rd Test: Setting a number for a field
+        [TestMethod]
+        public void SetNumber_SetsNumber_Void()
+        {
+            // Arrange
+            NumberConverter convertNum = new NumberConverter(7);
+            int convertedNum = 10;
+
+            // Act
+            convertNum.Number = convertedNum;
+
+            Assert.AreEqual(convertedNum, convertNum.Number);
+        }
     }
 }
