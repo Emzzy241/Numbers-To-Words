@@ -8,8 +8,12 @@ namespace NumbersToWords.Models
     {
         static void Main()
         {
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Convert Numbers To Words");
 
+            Console.WriteLine();
+            Console.WriteLine();
              Console.WriteLine("Enter a number (up to 1 trillion):");
 
             if (long.TryParse(Console.ReadLine(), out long number) && number >= 0 && number <= 1_000_000_000_000)
@@ -22,6 +26,33 @@ namespace NumbersToWords.Models
             {
                 Console.WriteLine("Invalid input. Please enter a non-negative number up to 1 trillion.");
             }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("To convert another number in numeric to word form, enter 'Y' to exit, enter 'N'");
+
+            string userCont = Console.ReadLine().ToUpper();
+            switch (userCont)
+            {
+                case "Y":
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Main();
+                    break;
+                case "N":
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Goodbye");
+                    break;
+                default:
+                    Console.WriteLine("Sorry, I didn't get that. Lets try again");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Main();
+                    break;
+            }
+            
         }
     }
 }

@@ -68,9 +68,9 @@ namespace NumbersToWords.Models
             {
                 {0, ""},
                 {1, "thousand"},
-                {1, "million"},
-                {1, "billion"},
-                {1, "trillion"},
+                {2, "million"},
+                {3, "billion"},
+                {4, "trillion"},
             };
 
             string result = "";
