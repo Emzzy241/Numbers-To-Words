@@ -76,7 +76,7 @@ namespace NumbersToWords.Models
             string result = "";
 
             // The first thing I did in my while loop is to: 
-            // calculates the remainder when divided by 1000 (effectively extracting the last three digits), and then stores these three digits in the chunk variable as an integer. This chunk will be further processed to convert it into words. The process is repeated for each set of three digits in the number.
+            // calculate the remainder when divided by 1000 (effectively extracting the last three digits), and then stores these three digits in the chunk variable as an integer. This chunk will be further processed to convert it into words. The process is repeated for each set of three digits in the number.
 
             // the below is responsible for processing the input number in chunks of three digits.
             // chunkCount is used to keep track of the current chunk's position (thousands, millions, billions, etc.).
